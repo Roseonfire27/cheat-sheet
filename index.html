@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <title>Rose's CSS Cheat Sheet</title>
+</head>
+<body>
+    <header>
+        <h1>CSS Selectors & Specificity Cheat Sheet</h1>
+    </header>
+
+    <main>
+        <h2>Selectors</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Selector</th>
+                    <th id="denotation">Denotation</th>
+                    <th>Description</th>
+                    <th id="example">CSS Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Type</td>
+                    <td><span class="code">[HTML element]{}</span></td>
+                    <td>Selects all matching elements.</td>
+                    <td><span class="code">h1 {}</span></td> 
+                </tr>
+                <tr>
+                    <td>Class</td>
+                    <td><span class="code">.[class name]{}</span></td>
+                    <td>Selects all elements with matching class name.</td>
+                    <td><span class="code">.bold {}</span></td> 
+                </tr>
+                <tr>
+                    <td>ID</td>
+                    <td><span class="code">#[id name]{}</span></td>
+                    <td>Selects the element with the matching ID name.</td>
+                    <td><span class="code">#socials {}</span></td> 
+                </tr>
+                <tr>
+                    <td>Grouped</td>
+                    <td><span class="code">[slector], [selector]{}</span></td>
+                    <td>Selectors can be grouped using a comma-separated list. In the example the CSS rule will apply to h1, h2 and h3 elements.</td>
+                    <td><span class="code">h1, h2, h3 {}</span></td> 
+                </tr>
+                <tr>
+                    <td>Chained</td>
+                    <td><span class="code">[slector][selector]{}</span></td>
+                    <td>Selects all elements that match all chained criteria. In the example only h3 elements that also have the section-heading class will be selected.</td>
+                    <td><span class="code">h3.section-heading {}</span></td> 
+                </tr>
+                <tr>
+                    <td>Descendant</td>
+                    <td><span class="code">[slector] [selector]{}</span></td>
+                    <td>Selects all elements that are descended from another matched selector. In the example only p elements inside the footer element will be selected.</td>
+                    <td><span class="code">footer p {}</span></td> 
+                </tr>
+            </tbody>
+        </table>
+    
+        <h2>Specificity</h2>
+        <p>Specificity is a ranking system used when there are multiple conflicting property values that point to the same element. When determining which rule to apply, the selector with the highest specificity wins.</p>
+        <aside>
+            <p>Specificity ranking, from most specific to least specific:</p>
+            <p id="ranking">ID selector > Class selectors > Type selectors</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p id="madeby">Made by Rose Tonis</p>
+    </footer>
+</body>
+</html>
